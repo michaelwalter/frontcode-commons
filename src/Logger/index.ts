@@ -11,12 +11,20 @@ enum DEFAULTS {
 
 export namespace Logger {
 
+    export const info = (...message: any): void => {
+        console.log(...message)
+    }
+
+    export const success = (...message: any): void => {
+        console.log(chalk.green(...message));
+    }
+
     export const warn = (...message: any): void => {
         console.log(chalk.yellow(...message));
     }
 
-    export const info = (...message: any): void => {
-        console.log(...message)
+    export const error = (...message: any): void => {
+        console.log(chalk.red(...message));
     }
 
     export const debug = (...message: any): void => {
